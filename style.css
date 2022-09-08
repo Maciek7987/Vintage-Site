@@ -96,7 +96,7 @@ body {
 .header_logo {
   position: absolute;
   top: 40%;
-  left: 10%;
+  left: 7%;
   transform: translate(0, -50%);
   font-size: 80px;
   letter-spacing: 10px;
@@ -107,6 +107,11 @@ body {
   text-decoration: none;
   z-index: 1;
   opacity: .8;
+}
+@media (max-width: 1400px) {
+ .header_logo {
+    font-size: 60px;
+  }
 }
 .header_logo:hover{
   color: #c3a64e49;
