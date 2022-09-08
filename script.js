@@ -5,7 +5,7 @@
   const headerButton1 = document.querySelector("a.only-to-js-1"); //link Home at website
   const headerButton2 = document.querySelector("a.only-to-js-2"); //link Under
   const video = document.querySelector("video");
-  video.play();
+  
   let informationToShowText = []; //global scope
 
   const a = document.querySelectorAll("a");
