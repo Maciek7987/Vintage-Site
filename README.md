@@ -10,7 +10,7 @@ Project on which I learned animation and DOM manipulation
 
 [https://maciek7987.github.io/Vintage-Site/]
 
-![Home Page](./images/Vintage.png)![Home Page](./images/Vintage-2Small.png)
+![Home Page](./images/Vintage.png)![Home Page](./images/Vintage-2.png)
 
 ## Some information about project
 
