@@ -7,17 +7,17 @@
 @font-face {
   font-family: handType;
 
-  src: url(Hand\ TypeWriter.ttf)
+  src: url(Hand\ TypeWriter.ttf);
 }
 @font-face {
   font-family: typeKeys;
 
-  src: url(Type\ Keys.ttf)
+  src: url(Type\ Keys.ttf);
 }
 @font-face {
   font-family: typeKeysF;
 
-  src: url(Type\ Keys\ Filled.ttf)
+  src: url(Type\ Keys\ Filled.ttf);
 }
 
 * {
@@ -31,10 +31,11 @@ body {
   overflow: hidden;
 }
 
-
 #dark-background-to-question {
   position: fixed;
   display: flex;
+  align-items: center;
+  justify-content: center;
   z-index: 3000;
   opacity: 0.8;
   width: 100%;
@@ -45,39 +46,33 @@ body {
   opacity: 0;
   transition: 0.8s linear;
 }
-.vintage-headphones-icon{
-    margin: auto;
-      width: 150px;
-      color: #c3a64e;
-}
-
-
 .div-sound {
   display: flex;
-  width: 30vw;
+  width: 38vw;
   height: 20vh;
   flex-direction: column;
   justify-content: space-around;
   position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
   margin: 10px;
   color: white;
+}
+.vintage-headphones-icon {
+  margin: auto;
+  height: 20vh;
+  color: #c3a64e;
 }
 
 .sound-h2 {
   text-align: center;
   margin: auto;
   color: white;
-  font-size: 40px;
 }
 
 .header {
   position: fixed;
   top: 0;
   left: 0;
-  width: 100%;
+  width: 100vw;
   height: 100vh;
   background: rgb(85, 83, 84);
 }
@@ -103,17 +98,22 @@ body {
   color: #c3a64e;
   font-weight: 400;
   font-family: "typeKeys", "Arial";
-  transition: .7s;
+  transition: 0.7s;
   text-decoration: none;
   z-index: 1;
-  opacity: .8;
+  opacity: 0.8;
 }
 @media (max-width: 1400px) {
- .header_logo {
+  .header_logo {
     font-size: 60px;
   }
 }
-.header_logo:hover{
+@media (max-width: 700px) {
+  .header_logo {
+    font-size: 50px;
+  }
+}
+.header_logo:hover {
   color: #c3a64e49;
 }
 
@@ -216,6 +216,12 @@ body {
   list-style: none;
   overflow: hidden;
 }
+@media (orientation: portrait) {
+  .only-grey-move-background {
+    left: -100%;
+    width: 100%;
+  }
+}
 
 .a-on-background-one,
 .a-on-background-two {
@@ -230,6 +236,12 @@ body {
   top: 61%;
   opacity: 0;
   transition: 0.8s ease-in-out;
+}
+@media (max-width: 700px) {
+  .a-on-background-one,
+  .a-on-background-two {
+    font-size: 30px;
+  }
 }
 .a-on-background-two {
   left: 100%;
@@ -275,6 +287,26 @@ body {
   color: white;
   position: relative;
 }
+@media (orientation: portrait) {
+  .articles {
+    letter-spacing: 0.5px;
+    line-height: auto;
+    left: 0;
+    font-size: 20px;
+    top: 10vh;
+    margin: 0;
+    position: absolute;
+    color: white;
+    z-index: 9999999999;
+  }
+  .articles_about-me,
+  .articles_lorem {
+    width: 100vw;
+    height: 100%;
+    padding: 2%;
+    background-color: #2b251be1;
+  }
+}
 .articles_about-me.show {
   display: block;
 }
@@ -287,9 +319,9 @@ body {
   display: block;
 }
 
-.footer{
+.footer {
   position: absolute;
-  bottom:0;
+  bottom: 0;
   left: 0;
   right: 0;
   background-color: #2b251b76;
@@ -298,16 +330,16 @@ body {
   transition: 0.7s ease-in-out;
 }
 
-.information{
+.information {
   display: flex;
   justify-content: space-evenly;
 }
-.information p{
+.information p {
   opacity: 0.8;
   color: rgb(255, 255, 255);
   padding: 5px 10px;
 }
-.information a{
+.information a {
   padding: 2px 5px;
   color: rgba(255, 255, 255, 0.521);
 }
@@ -318,37 +350,49 @@ body {
   color: #fff;
   border: 1px solid #fff;
   border-radius: 50%;
-  margin:  1vh 1vw;
+  margin: 1vh 1vw;
   text-align: center;
   line-height: 3vh;
   font-size: 18px;
   opacity: 0.8;
-  transition: .4s;
-  cursor:pointer;
+  transition: 0.4s;
+  cursor: pointer;
 }
 
-  @media (max-width: 1400px) {
-      #info-icon {
-          font-size: 13px;
-        }
+@media (max-width: 1400px) {
+  #info-icon {
+    font-size: 13px;
   }
-#info-icon:hover{
-    opacity: 0.4;
+}
+#info-icon:hover {
+  opacity: 0.4;
+}
+
+@media (orientation: portrait) {
+  .information {
+    flex-direction: column;
+  }
+  .footer {
+    height: 55vh;
+    bottom: -51vh;
+  }
+  .articles.show + .footer {
+    display: none;
+  }
 }
 
 .audio-wave {
   cursor: pointer;
   position: absolute;
   right: 1vw;
-  top:1vh;
+  top: 1vh;
   z-index: 100;
   width: 24px;
   height: 3vh;
   background-color: transparent;
   display: flex;
   justify-content: space-around;
-  transition: .4s;
-
+  transition: 0.4s;
 }
 .audio-wave:hover {
   opacity: 0.4;
@@ -424,4 +468,3 @@ body {
     heigth: 3px;
   }
 }
-
